@@ -1,0 +1,36 @@
+// import React from 'react'
+
+const ExpenseItem = (props) => {
+    // const expenseDate = new Date(2021, 2, 28)
+    // const expenseTitle = 'Car Insurance'
+    // const expenseAmount = 294.67
+    
+    let ei
+    ei = 'expense-item'
+    ei = 'flex flex-row gap-2 justify-between items-center shadow-xl p-2 my-4 mx-0 border rounded-xl bg-gray-600'
+    
+    let eid 
+    eid = 'expense-item__description'
+    eid = 'flex wrap gap-1 items-en text-white flex-no-wrap justify-start flex-1'
+    
+    let eip
+    eip = 'expense-item__price'
+    eip = 'text-xl text-white bg-purple-950 border border-white rounded-xl p-2 font-bold'
+    
+    return (
+        <>
+         
+            <div className={ei}>
+                <div>{props.date.toISOString()}</div>
+                {/* <div className={eid}> */}
+                    <h2 className={eid}>{props.title}</h2>
+                    <div className={eip}>
+                        ${props.amount}
+                    </div>
+                {/* </div> */}
+            </div>
+        </>
+    )
+}
+
+export default ExpenseItem
